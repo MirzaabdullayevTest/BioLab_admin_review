@@ -55,8 +55,10 @@ module.exports.deleteAdmin = async (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      toDelete(avatar);
-      res.redirect("/auth/login");
+      req.session.destroy(() => {
+        toDelete(avatar);
+        res.redirect("/auth/login");
+      })
     }
   });
 };
