@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    {{#if partners.length}}
+      {{#each partners}}
+        <div class="col-md-3">
+          <div class="card">
+            <img src="/images/{{img}}" alt="{{partner}}" class="card-img-top" />
+            <div class="card-body">
+              <h2 class="card-title"><a
+                  href="{{link}}"
+                  class="card-text"
+                >{{partner}}</a></h2>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="/admin/partner/edit/{{id}}">Редактировать</a>
+              <a href="/admin/partner/remove/{{id}}">Удалить</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h2>Пусто</h2>
+    {{/if}}
+  </div>
+</div>

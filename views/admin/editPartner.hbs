@@ -1,0 +1,62 @@
+<!-- /.card-header -->
+<div class="card-body">
+  <form
+    action="/admin/partner/edit/{{partner._id}}"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Имя"
+            name="partner"
+            required
+            value="{{partner.partner}}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- textarea -->
+        <div class="form-group">
+          <label>Линк</label>
+          <input
+            type="text"
+            class="form-control"
+            name="link"
+            id="link"
+            placeholder="Линк"
+            required
+            value="{{partner.link}}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Аватар</label>
+          <input
+            type="file"
+            class="form-control"
+            name="img"
+            id="img"
+            placeholder="Аватар"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Редактировать</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- /.card-body -->

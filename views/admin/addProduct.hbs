@@ -1,0 +1,139 @@
+<!-- /.card-header -->
+<div class="card-body">
+  <form action="/admin/product/add" method="POST" enctype="multipart/form-data">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Название продукт</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter ..."
+            name="name"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Цена продукт</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter ..."
+            name="price"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Цена со скидкой</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter ..."
+            name="priceSale"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Продукт фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Инфо продукта</label>
+          <textarea
+            class="form-control"
+            rows="6"
+            name="info"
+            id="info"
+            placeholder="Enter ..."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Категория продукта</label>
+          <select
+            class="custom-select rounded-0"
+            placeholder="Enter ..."
+            name="categoryId"
+            id="categoryId"
+            required
+          >
+            {{#each categories}}
+              <option value="{{_id}}">{{title}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Создать</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- /.card-body -->

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    {{#if blogs.length}}
+      {{#each blogs}}
+        <div class="col-md-3">
+          <div class="card">
+            <img src="/images/{{img}}" alt="{{text}}" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-title">{{text}}</p>
+              <p class="card-title">{{data}}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="/admin/blog/edit/{{id}}">Редактировать</a>
+              <a href="/admin/blog/remove/{{id}}">Удалить</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h2>Пусто</h2>
+    {{/if}}
+  </div>
+</div>

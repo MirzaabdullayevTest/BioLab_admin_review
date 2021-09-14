@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    {{> preloader}}
+    {{> navbar}}
+
+    {{> aside}}
+
+
+    <div class="wrapper">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            {{> contentHeader}}
+            <!-- Main content -->
+            <section class="content">
+            {{{body}}}
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        {{> footer}}
+    </div>
+    <!-- ./wrapper -->
+
+    {{> scripts}}
+</body>
+
+</html>

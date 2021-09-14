@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    {{#if products.length}}
+      {{#each products}}
+        <div class="col-md-3">
+          <div class="card">
+            {{#each imgs}}
+              <img
+                src="/images/{{img}}"
+                alt="{{@root.name}}"
+                class="card-img-top"
+              />
+            {{/each}}
+            <div class="card-body">
+              <h2 class="card-title"><a href="/admin/product/{{id}}">{{name}}</a></h2>
+              <p class="card-text">{{price}}</p>
+              <p class="card-text">{{priceSale}}</p>
+              <p class="card-text">{{info}}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="/admin/product/edit/{{id}}">Редактировать</a>
+              <a href="/admin/product/remove/{{id}}">Удалить</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h2>Пусто</h2>
+    {{/if}}
+  </div>
+</div>

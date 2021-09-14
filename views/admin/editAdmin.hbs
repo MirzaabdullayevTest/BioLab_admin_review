@@ -1,0 +1,84 @@
+<!-- /.card-header -->
+<div class="card-body">
+  <form
+    action="/admin/edit/{{_id}}"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+
+        {{#if loginError}}
+          <p class="alertError">{{loginError}}</p>
+        {{/if}}
+
+        <!-- text input -->
+        <div class="form-group">
+          <label>Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Имя"
+            name="name"
+            required
+            value="{{name}}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- textarea -->
+        <div class="form-group">
+          <label>Логин</label>
+          <input
+            type="text"
+            class="form-control"
+            name="login"
+            id="login"
+            placeholder="Логин"
+            required
+            value="{{login}}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- textarea -->
+        <div class="form-group">
+          <label>Пароль</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Пароль"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Аватар</label>
+          <input
+            type="file"
+            class="form-control"
+            name="avatar"
+            id="avatar"
+            placeholder="Аватар"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6 d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary">Редактировать</button>
+        <a href="/admin/remove/{{_id}}" class="btn btn-danger">Удалить админ</a>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- /.card-body -->

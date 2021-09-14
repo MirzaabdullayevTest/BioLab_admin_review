@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Категории</h3>
+  </div>
+  <!-- /.card-header -->
+  <div id="category">
+    {{#if categories.length}}
+      <div class="card-body">
+        <div
+          id="jsGrid1"
+          class="jsgrid"
+          style="position: relative; height: 100%; width: 100%;"
+        >
+          <div class="jsgrid-grid-header jsgrid-header-scrollbar">
+            <table class="jsgrid-table">
+              <tr class="jsgrid-header-row">
+                <th
+                  class="jsgrid-header-cell jsgrid-header-sortable"
+                  style="width: 150px;"
+                >Название</th>
+                <th
+                  class="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable"
+                  style="width: 50px;"
+                >
+                  Действие</th>
+              </tr>
+            </table>
+          </div>
+          <div class="jsgrid-grid-body" style="height: 821px;">
+            <table class="jsgrid-table">
+              <tbody>
+                {{#each categories}}
+                  <tr class="jsgrid-row">
+                    <td class="jsgrid-cell" style="width: 150px;"><a
+                        href="/admin/category/products/{{id}}"
+                      >{{title}}</a></td>
+                    <td
+                      class="jsgrid-cell jsgrid-align-center"
+                      style="width: 50px;"
+                    >
+                      <a href="/admin/category/edit/{{id}}">Редактировать</a>
+                      /
+                      <a href="/admin/category/remove/{{id}}">Удалить</a>
+                    </td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <p>Пусто</p>
+    {{/if}}
+  </div>
+
+  <!-- /.card-body -->
+</div>

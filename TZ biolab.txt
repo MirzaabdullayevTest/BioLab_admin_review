@@ -1,0 +1,48 @@
+Amin Panel : AdminLTI 
+
+
+
+Kategory: (CRUD) - Qo'shish, yangilash, ko'rish, o'zgartirish
+Productlar : CRUD - Qo'shish, yangilash, ko'rish, o'zgartirish, Category_Id 
+Partner : CRUD - Rasim, Nomi, link
+Blog : CRUD - rasim, tekst, data 
+
+
+1)Kategoriyalar uchun router qilish kerak post/get/edit/delete
+2)Kategoriyalari produkt bilan to'ldirish uchun post/get metod. Produkt qo'shayotganda kategoriyalar bitta selektrda bo'lishi kerak.
+
+3)Kategoriyalari nomi va u haqida qisqacha ma'lumot qo'shish kerak
+4)Produktlari nomi, rasmi, narxi va qaysi kategoriyaga tegishli ekanligini yozish kerak
+
+5)Partner  : nomi, rasim, link
+6) BLOG : rasim, tekst, data 
+
+ROUTERLAR JOYI (API):
+categories//
+
+/admin/categories
+/admin/category/add
+/admin/category/edit/:id
+/admin/category/remove/:id
+/admin/category/products/:categoryId
+
+blogs//
+
+/admin/blogs
+/admin/blog/add
+/admin/blog/edit/:id
+/admin/blog/remove/:id
+
+partners//
+
+/admin/partners
+/admin/partner/add
+/admin/partner/edit/:id
+/admin/partner/remove/:id
+
+product//
+
+/admin/products
+/admin/product/add
+/admin/product/edit/:id
+/admin/product/remove/:id

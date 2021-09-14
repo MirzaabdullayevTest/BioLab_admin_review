@@ -1,0 +1,103 @@
+<!-- /.card-header -->
+<div class="card-body">
+  <form action="/admin/product/edit/{{product.id}}" method="POST" enctype="multipart/form-data">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Название продукт</label>
+          <input type="text" class="form-control" placeholder="Enter ..." name="name" required
+            value={{product.name}} />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Цена продукт</label>
+          <input type="number" class="form-control" placeholder="Enter ..." name="price" required
+            value={{product.price}} />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <!-- text input -->
+        <div class="form-group">
+          <label>Цена со скидкой</label>
+          <input type="number" class="form-control" placeholder="Enter ..." name="priceSale" required
+            value={{product.priceSale}} />
+        </div>
+      </div>
+    </div>
+     <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Продукт фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+            value={{imgs.first}}
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+            value={{imgs.second}}
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+            value={{imgs.third}}
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Допелнительное фото</label>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter ..."
+            name="img"
+            value={{imgs.fourth}}
+            required
+          />
+        </div>
+      </div>
+    </div>
+   
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Редактировать</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+<!-- /.card-body -->

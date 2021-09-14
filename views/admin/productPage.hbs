@@ -1,0 +1,14 @@
+<div class="col-4">
+  <div class="card" style="width: 18rem;">
+    {{#each product.imgs}}
+      <img src="/images/{{img}}" class="card-img-top" alt="..." />
+    {{/each}}
+    <div class="card-body">
+      <h5 class="card-text">{{product.name}}</h5>
+      <h5 class="card-text">{{product.price}}</h5>
+      <h5 class="card-text">{{product.priceSale}}</h5>
+      <p class="card-text">{{product.info}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
